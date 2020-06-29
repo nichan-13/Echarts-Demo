@@ -1,0 +1,303 @@
+// css 初始化
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
+// 声明字体
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+
+
+body {
+  background: url(../images//bg.jpg) no-repeat top center;
+  line-height: 1.15;
+}
+
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url(../images/head_bg.png) no-repeat;
+  background-size: 100% 100%;
+
+  h1 {
+    font-size: .475rem;
+    color: rgba(255, 255, 255, 0.87);
+    text-align: center;
+    line-height: 1rem;
+  }
+
+  .show-time {
+    position: absolute;
+    top: 0;
+    right: .375rem;
+    line-height: .9375rem;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: .25rem;
+  }
+}
+
+// 页面主体盒子
+.mainbox {
+  display: flex;
+  min-width: 1024px;
+  max-height: 1920px;
+  margin: 0 auto;
+  padding: .125rem .125rem 0;
+
+  .column {
+    flex: 3;
+  }
+
+  .column:nth-child(2) {
+    flex: 5;
+    margin: 0 .125rem .1875rem;
+    // 图片旋转有时会超出屏幕最大位置导致滚动条自动上下移动
+    overflow: hidden;
+  }
+
+  .panel {
+    position: relative;
+    height: 3.875rem;
+    padding: 0 .1875rem .5rem;
+    margin-bottom: .1875rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    background: url(../images/line.png) rgba(255, 255, 255, 0.03);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid #02a6b5;
+      border-top: 2px solid #02a6b5;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #02a6b5;
+      border-top: 2px solid #02a6b5;
+      content: '';
+    }
+
+    .panel-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid #02a6b5;
+        border-bottom: 2px solid #02a6b5;
+        content: '';
+      }
+
+      &::after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #02a6b5;
+        border-bottom: 2px solid #02a6b5;
+        content: '';
+      }
+    }
+
+    h2 {
+      height: .6rem;
+      color: #fff;
+      line-height: .6rem;
+      text-align: center;
+      font-size: 0.25rem;
+      font-weight: 400;
+      a {
+        color: rgb(167, 167, 167);
+        text-decoration: none;
+        margin: 0 .125rem;
+      }
+      .a-active {
+        color: #fff;
+      }
+    }
+
+    .chart {
+      height: 3rem;
+    }
+  }
+}
+
+// no数字模块
+.no {
+  background-color: rgba(101, 132, 226, 0.1);
+  padding: .1875rem;
+
+  .no-hd {
+    position: relative;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: .375rem;
+      height: .125rem;
+      border-top: 2px solid #02a6b5;
+      border-left: 2px solid #02a6b5;
+      content: '';
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: .375rem;
+      height: .125rem;
+      border-bottom: 2px solid #02a6b5;
+      border-right: 2px solid #02a6b5;
+      content: '';
+    }
+
+    ul {
+      display: flex;
+
+      li {
+        position: relative;
+        flex: 1;
+        line-height: 1rem;
+        font-size: .875rem;
+        color: #ffeb7b;
+        text-align: center;
+        font-family: electronicFont;
+
+        &:first-child::after {
+          content: '';
+          position: absolute;
+          top: 25%;
+          right: 0;
+          height: 50%;
+          width: 1px;
+          background-color: rgba(255, 255, 255, 0.3);
+        }
+      }
+    }
+  }
+
+  .no-bd {
+    ul {
+      display: flex;
+
+      li {
+        flex: 1;
+        text-align: center;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: .225rem;
+        height: .5rem;
+        line-height: .5rem;
+        padding-top: .125rem;
+      }
+    }
+  }
+}
+
+.map {
+  position: relative;
+  height: 10.125rem;
+
+  .map1 {
+    width: 6.475rem;
+    height: 6.475rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../images/map.png);
+    background-size: 100% 100%;
+    opacity: 0.3;
+  }
+
+  .map2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 8.0375rem;
+    height: 8.0375rem;
+    background: url(../images/lbx.png);
+    background-size: 100% 100%;
+    animation: rotate1 15s linear infinite;
+    opacity: .6;
+  }
+
+  .map3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7.075rem;
+    height: 7.075rem;
+    background: url(../images/jt.png);
+    background-size: 100% 100%;
+    animation: rotate2 15s linear infinite;
+  }
+
+  .chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 10.125rem;
+    width: 100%;
+  }
+
+  @keyframes rotate1 {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes rotate2 {
+    from {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    to {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+}
+
+/* 约束屏幕尺寸 */
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
+}
