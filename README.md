@@ -13,9 +13,9 @@
 - 性能好可流畅运行PC与移动设备
 - 兼容主流浏览器
 - 提供很多常用图表，且可**定制**。
-  - [折线图](https://www.echartsjs.com/zh/option.html#series-line)、[柱状图](https://www.echartsjs.com/zh/option.html#series-bar)、[散点图](https://www.echartsjs.com/zh/option.html#series-scatter)、[饼图](https://www.echartsjs.com/zh/option.html#series-pie)、[K线图](https://www.echartsjs.com/zh/option.html#series-candlestick)
+  - [折线图](https://echarts.apache.org/examples/zh/index.html#chart-type-line)、[柱状图](https://echarts.apache.org/examples/zh/index.html#chart-type-bar)、[散点图](https://echarts.apache.org/examples/zh/index.html#chart-type-scatter)、[饼图](https://echarts.apache.org/examples/zh/index.html#chart-type-pie)、[K线图](https://echarts.apache.org/examples/zh/index.html#chart-type-candlestick)
 
-官网地址：<https://www.echartsjs.com/zh/index.html>
+官网地址：<https://echarts.apache.org/zh/index.html>
 
 
 
